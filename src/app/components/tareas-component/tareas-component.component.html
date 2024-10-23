@@ -1,0 +1,34 @@
+<section>
+    <h2>Lista de Tareas</h2>
+    <div>
+        <nav>
+            <ul>
+                <li *ngFor="let tarea of tareas">
+                    <strong>{{tarea.nombre}}</strong>
+                    <button>Mostrar Detalles</button>
+                    <button>x</button>
+                    <div>
+                        <p><strong>{{tarea.docente}}</strong></p>
+                        <p><strong>{{tarea.descripcion}}</strong></p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<section>
+    <h2>Agregar Tarea</h2>
+    <form>
+        <label for="nombre">Nombre de la Tarea</label>
+        <input type="text" [(ngModel)]="nombre" name="nombre">
+
+        <label for="docente">Docente</label>
+        <input type="text" [(ngModel)]="docente" name="docente">
+
+        <label for="descripcion">Descripcion</label>
+        <textarea [(ngModel)]="descripcion" name="descripcion"></textarea>
+
+        <button (click)="agregar()">Agregar Tarea</button>
+    </form>
+</section>
