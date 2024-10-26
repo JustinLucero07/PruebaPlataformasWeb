@@ -6,8 +6,11 @@ import { Injectable } from '@angular/core';
 export class TareaServiceService {
 
   tareas: any = []
+  
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   agregar(nombre: string, docente: string, descripcion: string) {
 
@@ -15,15 +18,34 @@ export class TareaServiceService {
     localStorage.setItem('tareas', JSON.stringify(this.tareas))
   }
 
-  /*eliminar(tarea:any){
-    this.tareas = this.tareas.find(tarea => this.tareas.descripcion)
-  }*/
+  eliminar(tarea: any) {
+    const index = this.tareas.indexOf(tarea); 
+    if (index > -1) { 
+        this.tareas.splice(index, 1); 
+    }
+    localStorage.setItem('tareas', JSON.stringify(this.tareas)); 
+}
+
 
   listarTareas() {
     return this.tareas
   }
 
-  mostrarD(){
-  }
+  mostrarDetalles(tarea: any) {
+    let tareaEncontrada = null; 
   
+    for (let i = 0; i < this.tareas.length; i++) {
+      if (this.tareas[i].nombre === tarea.nombre) {
+        tareaEncontrada = this.tareas[i];
+        break; 
+      }
+    }
+  
+    if (tareaEncontrada) {
+      return tareaEncontrada; 
+    } else {
+      throw new Error('Tarea no encontrada'); 
+    }
+  } 
+
 }

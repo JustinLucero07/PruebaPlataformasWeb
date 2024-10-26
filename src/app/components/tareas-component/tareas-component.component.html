@@ -5,12 +5,9 @@
             <ul>
                 <li *ngFor="let tarea of tareas">
                     <strong>{{tarea.nombre}}</strong>
-                    <button>Mostrar Detalles</button>
-                    <button>x</button>
-                    <div>
-                        <p><strong>{{tarea.docente}}</strong></p>
-                        <p><strong>{{tarea.descripcion}}</strong></p>
-                    </div>
+                    <button (click)="mostrarDetalles(tarea)">Mostrar Detalles</button>
+                    <button (click)="eliminar(tarea)">x</button>
+                    <app-detalle-tarea-component [tarea]="tareaSeleccionada"></app-detalle-tarea-component>
                 </li>
             </ul>
         </nav>

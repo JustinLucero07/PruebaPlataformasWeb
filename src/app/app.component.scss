@@ -1,0 +1,122 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Fondo suave en tonos azul claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo del header */
+  header {
+    background-color: #00796b; /* Verde azulado oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilo del nav */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilo de secciones */
+  section {
+    margin: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo de los títulos */
+  h1, h2 {
+    font-weight: normal;
+  }
+  
+  /* Estilo de la lista de tareas */
+  nav ul {
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  nav ul li button {
+    margin-left: 10px;
+    background-color: #d32f2f; /* Rojo oscuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  nav ul li button:hover {
+    background-color: #b71c1c; /* Rojo más oscuro en hover */
+  }
+  
+  /* Estilo del formulario */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin: 10px 0 5px;
+  }
+  
+  form input, form textarea {
+    padding: 5px; /* Tamaño reducido para los inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Tamaño de fuente reducido */
+  }
+  
+  form button {
+    margin-top: 10px;
+    background-color: #00796b; /* Verde azulado */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px; /* Ajustar el padding para un botón más pequeño */
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #004d40; /* Verde azulado más oscuro en hover */
+  }
+  
+  /* Estilo de detalles de tarea */
+  div {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #b2dfdb; /* Fondo claro para detalles */
+  }
+  
+  strong {
+    color: #00796b; /* Color de texto en fuerte para tareas */
+  }
+  
+  
